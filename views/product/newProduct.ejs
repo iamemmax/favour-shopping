@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%- title %> </title>
+        <link rel="shortcut icon" href="../.././img/davin-removebg-preview (1) (1).png" type="image/x-icon">
+        <link rel="stylesheet" href="./../.././css/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="your-project-dir/icon-font/lineicons.css" rel="stylesheet">
+        <!-- <script src="https://cdn.ckeditor.com/ckeditor5/29.2.0/inline/ckeditor.js"></script> -->
+        <script src="https://cdn.ckeditor.com/ckeditor5/29.2.0/decoupled-document/ckeditor.js"></script>
+
+</head>
+<body >
+    
+
+    <div class="container">
+        <form action="/product/new" method="POST" enctype="multipart/form-data"  class="bg-accent text-light" >
+        <h2>Add new Product</h2>
+
+        <% if (typeof error !== "undefined") { %>
+            
+            <% error.forEach(errors => { %>
+                <div class="error" id="error" role="alert">
+                    <%= errors.msg %> 
+                    <button type="button"><i class="fas fa-times"></i></button>
+                </div>
+                
+                <% }) %>
+                <% } %>
+                
+                <input type="text" name="productName" placeholder="Product name" id="">
+        <input type="text" name="price" placeholder="price" id="">
+        
+        <select name="category" id="">
+            <option value="shoe">Shoe</option>`
+            <option value="bag">bag</option>
+            <option value="Electronics">Electronics</option>
+            <option value="computer">computer</option>
+            <option value="wares">wares</option>
+        </select>
+        
+        <div class="addmoreContainer">
+            <div class="addmore">
+                <input type="file" name="productImg" multiple  required maxlength="6" id="" >
+                <input type="text" name="color" id="" placeholder="color">
+                <input type="text" name="size" placeholder="product size" id="">
+                <input type="text" name="totalQty" placeholder="total product in stock" id="">
+            </div>
+        </div>
+        
+        <br><br>
+        
+        <button type="button" id="addmore">Add More</button>
+        
+        <div class="description">
+            <div id="toolbar-container"></div>            
+                <div class="description" placeholder="description" contenteditable="true"  id="editor" style="background-color: #fff;color: black;"></div>
+        </div>
+
+        <button type="submit" >Add Product</button>
+        </form>
+    </div>
+
+<script>
+          DecoupledEditor
+        .create( document.querySelector( '#editor' ) )
+        .then( editor => {
+            const toolbarContainer = document.querySelector( '#toolbar-container' );
+
+            toolbarContainer.appendChild( editor.ui.view.toolbar.element );
+        } )
+        .catch( error => {
+            console.error( error );
+        } );
+    </script>
+
+
+    <script src="../.././js/product.js"></script>
+</body>
+</html>

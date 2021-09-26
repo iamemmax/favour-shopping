@@ -7,8 +7,9 @@ const mongoose = require("mongoose")
 const session = require("express-session")
 const passport = require("passport")
 const LocalStrategy = require('passport-local').Strategy;
-const userRouter = require("./routes/authenticate/userRoute")
-const userSchema = require("./model/userSchema")
+const userRouter = require("./routes/userRoute")
+const productRouter = require("./routes/product")
+const productSchema = require("./model/productSchema")
 
 const app = express()
 
@@ -16,8 +17,8 @@ const app = express()
 // middle wares
 app.use(cors())
 app.set("view engine", "ejs")
-app.use(express.static(path.join(__dirname, "public")))
-app.use(express.urlencoded({extended:false}))
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
 app.use(session({
@@ -30,18 +31,25 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+
 require("./config/passport")(passport)
 
     
 
 
 // Homepage routes
-app.get("/", (req, res) =>{
+app.get("/", async (req, res) =>{
+
+    let products =  await productSchema.find()
+   
+    
     res.render("index", {
         title:"Homepage",
         description:"we sell product like shoe, bags, wristwatch",
         keyword:"buy product shoe bag wristwatch cloth t-shirt jean trousers",
-        user:req.user
+        user:req.user,
+        products
     })
 })
 
@@ -54,7 +62,8 @@ mongoose.connect(process.env.db_connect, {
 })
 
 // Routes
-app.use("/user", userRouter)
+app.use("/user", userRouter);
+app.use("/product", productRouter);
 
 // listen to Port
 const PORT = process.env.PORT || 3000

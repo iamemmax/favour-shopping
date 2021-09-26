@@ -1,0 +1,6 @@
+.hot-deal{
+   @extend .featureCategory;
+   h2{
+       border-color: $primary;
+   }
+}

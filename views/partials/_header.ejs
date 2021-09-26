@@ -7,11 +7,83 @@
     <meta name="description" content="<%- description %> ">
     <meta name="keyword" content="<%- keyword %> ">
     <title><%- title %> </title>
-
-    <% if (user) { %>
-        <nav><ul><a href="/user/logout">Logout   </a></ul></nav>
-     
-    <% } %>
+    <link rel="shortcut icon" href="../.././img/davin-removebg-preview (1) (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="your-project-dir/icon-font/lineicons.css" rel="stylesheet">
 </head>
 <body>
+   <header class="header">
+        <nav>
+            <div class="left_nav">
+                <div class="menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="logo ">
+                    <h1><a href="/"><img src="../.././img/davin-removebg-preview (1) (1).png" alt=""> Davinsoft</a></h1>
+                </div>
+        </div>
+        <div class="right_nav">
+            <div class="sear">
+                <a href="/"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="userIcon">
+                <a href="/"><i class="fas fa-user"></i></a>
+            </div>
+            <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+            <ul class="ul">
+                <li><a href="#"><i class="fas fa-socks"></i> Babies</a></li>
+                <li><a href="#"><i class="fas fa-tv"></i> Electronics</a></li>
+                <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                <li><a href="#"><i class="fas fa-laptop"></i> Home & Office</a></li>
+                <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                <li><a href="#"><i class="fas fa-tshirt"></i> Automobile</a></li>
+                <li><a href="#"><i class="fas fa-tshirt"></i> Kitchen</a></li>
+                <li><a href="#"><i class="fas fa-tshirt"></i> Supermarket</a></li>
+                <li><a href="#"><i class="fas fa-tshirt"></i> Phone & Accessories</a></li>
+                <li><a href="#"><i class="fas fa-shopping-bag"></i> Health and Beauty</a></li>
+                <li><a href="#"><i class="fas fa-phone"></i> Computer & Accessories</a></li>
+            
+                
+
+
+                     
+
+                <div class="remove">
+                    <i class="fas fa-times"></i>
+                </div>
+            </ul>
+            <div class="search" >
+                <form action="">
+                    <input type="text" name="q" id="" placeholder="search anything">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+        <div class="UserInfo">
+            <p>Welcome to Davinsoft</p>
+            <div class="btn-info">
+                <% if(!user){ %> 
+                <li class="join"><a href="/user/register">Join</a></li>
+                <li class="signin"><a href="/user/login">Signin</a></li>
+                <% } else { %>
+                    <li class="join"><a href="/user/logout">Logout</a></li>
+
+                 <% } %> 
+            </div>
+            <ul>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">My Order</a></li>
+                <li><a href="#">Message center</a></li>
+                <li><a href="#">Wish List</a></li>
+               
+            </ul>
+        </div>
+
+
     
