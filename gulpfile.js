@@ -5,13 +5,13 @@ const sass = require("gulp-sass")(require("sass"))
 
 
 function buildTask(){
-    return src("sass/**/*.scss")
+    return src("./public/sass/**/*.scss")
         .pipe(sass())
-        .pipe(dest("css"))
+        .pipe(dest("./public/css"))
 }
 
 function watchTask(){
-    watch(["sass/**/*.scss"], buildTask)
+    watch(["./public/sass/**/*.scss"], buildTask)
 }
 
 exports.default = series(buildTask, watchTask)

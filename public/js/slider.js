@@ -1,77 +1,7 @@
-// var carousel = document.getElementById('carousel');
-// var slides = 3;
-// var speed = 7000; // 5 seconds
-
-// function carouselHide(num) {
-//     indicators[num].setAttribute('data-state', '');
-//     slides[num].setAttribute('data-state', '');
-
-//     slides[num].style.opacity=0;
-// }
-
-// function carouselShow(num) {
-//     indicators[num].checked = true;
-//     indicators[num].setAttribute('data-state', 'active');
-//     slides[num].setAttribute('data-state', 'active');
-
-//     slides[num].style.opacity=1;
-// }
-
-// function setSlide(slide) {
-//     return function() {
-//         // Reset all slides
-//         for (var i = 0; i < indicators.length; i++) {
-//             indicators[i].setAttribute('data-state', '');
-//             slides[i].setAttribute('data-state', '');
-            
-//             carouselHide(i);
-//         }
-
-//         // Set defined slide as active
-//         indicators[slide].setAttribute('data-state', 'active');
-//         slides[slide].setAttribute('data-state', 'active');
-//         carouselShow(slide);
-
-//         // Stop the auto-switcher
-//         clearInterval(switcher);
-//     };
-// }
-
-// function switchSlide() {
-//     var nextSlide = 0;
-
-//     // Reset all slides
-//     for (var i = 0; i < indicators.length; i++) {
-//         // If current slide is active & NOT equal to last slide then increment nextSlide
-//         if ((indicators[i].getAttribute('data-state') == 'active') && (i !== (indicators.length-1))) {
-//             nextSlide = i + 1;
-//         }
-
-//         // Remove all active states & hide
-//         carouselHide(i);
-//     }
-
-//     // Set next slide as active & show the next slide
-//     carouselShow(nextSlide);
-// }
-
-// if (carousel) {
-//     var slides = carousel.querySelectorAll('.slide');
-//     var indicators = carousel.querySelectorAll('.indicator');
-
-//     var switcher = setInterval(function() {
-//         switchSlide();
-//     }, speed);
-
-//     for (var i = 0; i < indicators.length; i++) {
-//         indicators[i].addEventListener("click", setSlide(i));
-//     }
-// }
 
 
 
-
-
+// full page slider
 window.onload = function() {
 
     let slider = document.querySelector('#slider');
@@ -180,4 +110,67 @@ window.onload = function() {
   
 }
 
+
+
+// product slider
+"use strict";
+
+productScroll();
+
+function productScroll() {
+  let slider = document.getElementById("slider");
+  let next = document.getElementsByClassName("pro-next");
+  let prev = document.getElementsByClassName("pro-prev");
+  let slide = document.getElementById("slide");
+  let item = document.getElementById("slide");
+
+  for (let i = 0; i < next.length; i++) {
+    //refer elements by class name
+
+    let position = 0; //slider postion
+
+    prev[i].addEventListener("click", function() {
+      //click previos button
+      if (position > 0) {
+        //avoid slide left beyond the first item
+        position -= 1;
+        translateX(position); //translate items
+      }
+    });
+
+    next[i].addEventListener("click", function() {
+      if (position >= 0 && position < hiddenItems()) {
+        //avoid slide right beyond the last item
+        position += 1;
+        translateX(position); //translate items
+      }
+    });
+  }
+
+  function hiddenItems() {
+    //get hidden items
+    let items = getCount(item, false);
+    let visibleItems = slider.offsetWidth / 210;
+    return items - Math.ceil(visibleItems);
+  }
+}
+
+function translateX(position) {
+  //translate items
+  slide.style.left = position * -210 + "px";
+}
+
+function getCount(parent, getChildrensChildren) {
+  //count no of items
+  let relevantChildren = 0;
+  let children = parent.childNodes.length;
+  for (let i = 0; i < children; i++) {
+    if (parent.childNodes[i].nodeType != 3) {
+      if (getChildrensChildren)
+        relevantChildren += getCount(parent.childNodes[i], true);
+      relevantChildren++;
+    }
+  }
+  return relevantChildren;
+}
 
