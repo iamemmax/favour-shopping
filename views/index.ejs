@@ -3,31 +3,11 @@
 <%- include("./partials/_featureCategory") %> 
 <%- include("./partials/_hotDeals") %> 
 <%- include("./partials/_advert") %> 
+<%- include("./partials/_mostPopular") %> 
 
 
 
-<% products.forEach(product => { %>
- 
-    <% console.log(product); %> 
-    
-    <div class="product-container" style="margin-top: 4rem;z-index: 9; ">
-        
-        
-        <a href="/product/<%= product.slug %> ">
-            <h2><%= product.productName %> </h2>
-            <p><%= product.price %> </p>
-            <img src="../../img/productImg/<%= product.productImg[0].filename %> " alt="<%= product.productImg[0].filename %>" style="width: 200px; height: 200px;">
-            
-        </a>
-        
-    </div>
-    <% console.log(product.productImg[0].filename) %> 
-    
-    
-    
-</div>
 
-<% }) %>
 
 <script src=".././js/main.js"></script>
 <script src="../.././js/slider.js"></script>

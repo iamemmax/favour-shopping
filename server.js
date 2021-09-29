@@ -10,6 +10,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const userRouter = require("./routes/userRoute")
 const productRouter = require("./routes/product")
 const productSchema = require("./model/productSchema")
+const compression = require("compression")
 
 const app = express()
 
@@ -20,6 +21,7 @@ app.set("view engine", "ejs")
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
+app.use(compression())
 
 app.use(session({
     secret:"emmalex",

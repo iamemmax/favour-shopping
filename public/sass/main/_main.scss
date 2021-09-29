@@ -1,8 +1,16 @@
 @import "../base/reset";
 @import "../vendors/font";
 @import "../utilities/color";
+@import "../utilities/mixing";
+@import "../utilities/variables";
+@import "../component/button";
+@import "../layout/breakpoint";
+@import "../layout/grid";
 @import "../layout/navbar";
+@import "../component/card"; 
 @import "../layout/slider";
 @import "../layout/featureCategory";
 @import "../layout/hotDeal";
 @import "../layout/advert";
+@import "../layout/mostPopular";
+

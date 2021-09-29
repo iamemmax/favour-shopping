@@ -1,0 +1,69 @@
+.mostPopular{
+    position: relative;
+    width: 90%;
+    margin: 0px auto;
+    height: auto;
+    background-color: #fff;
+
+
+
+
+    .line{
+       @include divider;
+    }
+    #mostPopular-h2{
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        font-family: 'Roboto', sans-serif;
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    @media screen and (max-width:1000px) {
+        width: 100%;
+    }
+
+
+    .categories{
+        display: flex;
+        position: absolute;
+        top: 5rem;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        flex-flow: row wrap;
+        // margin-bottom: 5rem;
+
+        div{
+            margin: 15px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            text-transform: capitalize;
+            
+
+        }
+        .active{
+            background-color: $secondary;
+            padding: 8px 15px;
+            color: #fff;
+            border-radius: 4;
+        }
+
+    }
+
+
+    .add-con{
+       position: relative;
+       top: 2rem;
+       height: auto;
+       background-color: rgb(252, 252, 252);
+    }
+
+    overflow: hidden;
+
+}

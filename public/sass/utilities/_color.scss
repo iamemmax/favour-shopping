@@ -28,6 +28,9 @@ $colors:(
     .bg-#{$key}{
         background-color: $val;
     }
+    .btn-#{$key}{
+        background-color: $val;
+    }
 }
 
 @function setColor($background){

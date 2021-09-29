@@ -1,0 +1,252 @@
+@use 'sass:math';
+
+// spacing 
+
+$base-margin:0.75rem;
+$base-padding:0.75rem;
+
+// outline
+$base-border-thickness:1px;
+$base-border-radius:20px;
+
+// font-size
+$base-font-size:1rem;
+$font-size-sm:  $base-font-size * 0.75;
+$font-size-lg:  $base-font-size * 1.5;
+$font-size-xl:  $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;
+
+
+
+$utilities:(
+    "padding":(
+        "prefix" : "p",
+        "value" : (
+            "0" : 0,
+            "1":  $base-padding,
+            "2":  $base-padding * 2,
+            "3" : $base-padding * 4,
+            "4" : $base-padding * 6,
+            "5" : $base-padding * 8,
+        ),
+
+
+    ),
+
+    "padding-left":(
+        "prefix" : "pl",
+        "value" : (
+            "0" : 0,
+            "1":  $base-padding,
+            "2":  $base-padding * 2,
+            "3" : $base-padding * 4,
+            "4" : $base-padding * 6,
+            "5" : $base-padding * 8,
+        ),
+
+
+    ),
+    "padding-right":(
+        "prefix" : "pr",
+        "value" : (
+            "0" : 0,
+            "1":  $base-padding,
+            "2":  $base-padding * 2,
+            "3" : $base-padding * 4,
+            "4" : $base-padding * 6,
+            "5" : $base-padding * 8,
+        ),
+
+
+    ),
+    "padding-top":(
+        "prefix" : "pt",
+        "value" : (
+            "0" : 0,
+            "1":  $base-padding,
+            "2":  $base-padding * 2,
+            "3" : $base-padding * 4,
+            "4" : $base-padding * 6,
+            "5" : $base-padding * 8,
+        ),
+
+
+    ),
+    "padding-bottom":(
+        "prefix" : "pb",
+        "value" : (
+            "0" : 0,
+            "1":  $base-padding,
+            "2":  $base-padding * 2,
+            "3" : $base-padding * 4,
+            "4" : $base-padding * 6,
+            "5" : $base-padding * 8,
+        ),
+
+
+    ),
+
+    // margin
+    "margin":(
+        "prefix" : "m",
+        "value" : (
+            "0" : 0,
+            "1":  $base-margin,
+            "2":  $base-margin * 2,
+            "3" : $base-margin * 4,
+            "4" : $base-margin * 6,
+            "5" : $base-margin * 8,
+        ),
+
+
+    ),
+
+    "margin-left":(
+        "prefix" : "ml",
+        "value" : (
+            "0" : 0,
+            "1":  $base-margin,
+            "2":  $base-margin * 2,
+            "3" : $base-margin * 4,
+            "4" : $base-margin * 6,
+            "5" : $base-margin * 8,
+        ),
+
+
+    ),
+    "margin-right":(
+        "prefix" : "mr",
+        "value" : (
+            "0" : 0,
+            "1":  $base-margin,
+            "2":  $base-margin * 2,
+            "3" : $base-margin * 4,
+            "4" : $base-margin * 6,
+            "5" : $base-margin * 8,
+        ),
+
+
+    ),
+    "margin-top":(
+        "prefix" : "mt",
+        "value" : (
+            "0" : 0,
+            "1":  $base-margin,
+            "2":  $base-margin * 2,
+            "3" : $base-margin * 4,
+            "4" : $base-margin * 6,
+            "5" : $base-margin * 8,
+        ),
+
+
+    ),
+    "margin-bottom":(
+        "prefix" : "mb",
+        "value" : (
+            "0" : 0,
+            "1":  $base-margin,
+            "2":  $base-margin * 2,
+            "3" : $base-margin * 4,
+            "4" : $base-margin * 6,
+            "5" : $base-margin * 8,
+        ),
+
+
+    ),
+    "opacity":(
+        "prefix" : "o",
+        "value" : (
+            "10" : 0.1,
+            "20" : 0.2,
+            "30" : 0.3,
+            "40" : 0.4,
+            "50" : 0.5,
+            "60" : 0.6,
+            "70" : 0.7,
+            "80" : 0.8,
+            "90" : 0.9,
+            "100" : 1,
+            
+        ),
+
+
+    ),
+
+
+    "font-size":(
+        "prefix" : "font",
+        "value" : (
+            
+            "sm" : $font-size-sm,
+            "md" : $base-font-size ,
+            "lg" : $font-size-lg,
+            "xl" : $font-size-xl ,
+            "xxl" : $font-size-xxl ,
+
+            
+        ),
+    ),
+
+    
+    "display" :(
+        "prefix" : "display",
+        "value" : (
+            "n" : none,
+            "b" : block,
+            "f" : flex,
+            "g" : grid,
+            "i-b" :inline-block
+        )
+
+    ),
+
+
+    "text-decoration" : (
+        "prefix" : "td",
+        "value" : (
+            "n" : none,
+            "u" : underline,
+            "o" : overline,
+            "s" : solid,
+            "w" : wavy,
+
+        )
+        
+    ), 
+    
+
+);
+
+
+
+@each $pro, $map in $utilities {
+    $prefix: map-get($map, "prefix" );
+    $value: map-get($map, "value" );
+
+    @each $k, $i in $value{
+        @if ($k == "default") {
+            .#{$prefix}{
+                #{$pro} : $i
+            }
+        }@else{
+            .#{$prefix}-#{$k}{
+                #{$pro} : $i
+            }
+        }
+    }
+}
+
+
+$layout: flex-start, center, space-around, space-between, flex-end;
+$align :      center, baseline,inherit,  stretch, flex-start,  flex-end;
+@each $i in $layout {
+    .justify-#{$i}{
+        justify-content: $i;
+    }
+}
+@each $i in $align {
+    .align-#{$i}{
+        align-items: $i;
+    }
+}
+

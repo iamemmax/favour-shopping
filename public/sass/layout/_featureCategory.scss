@@ -9,6 +9,7 @@
     background: #fff;
     margin-top: 10px;
     justify-content: center;
+    overflow: hidden;
 
     h2{
         padding: 30px;
@@ -88,7 +89,7 @@
                 margin-top: 15px;
             }
 
-            @media screen and (max-width:900px) {
+            @media screen and (max-width:1000px) {
                 // border: 2px solid rgb(64, 4, 175);
                 width: 80px;
                 height: 120px;
@@ -115,9 +116,10 @@
 
     }
 
-    @media screen and (max-width:800px) {
+    @media screen and (max-width:1200px) {
         height: auto;
         width: 100%;
+        overflow: hidden;
      }
     
 }

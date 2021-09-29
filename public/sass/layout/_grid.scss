@@ -1,0 +1,91 @@
+@use "sass:math";
+$grid-column:12;
+
+.container{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0px auto;
+    padding: 0px 20px;
+    
+    @media screen  and (max-width:768px) {
+        border: 2px solid red;
+    
+        max-width: 100% !important;
+        padding: 0 !important;
+        
+    }
+    
+}
+
+.row{
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+// column classess
+
+@include xs{
+    @for $i from 1 through $grid-column {
+        .col-#{$i}-xs{
+            @include border-box;
+            width: math.div($i * 100%, $grid-column);
+        }
+    }
+}
+@include sm{
+    @for $i from 1 through $grid-column {
+        .col-#{$i}-sm{
+            @include border-box;
+            width: math.div($i * 100%, $grid-column);
+        }
+    }
+}
+@include md{
+    @for $i from 1 through $grid-column {
+        .col-#{$i}-md{
+            @include border-box;
+            width: math.div($i * 100%, $grid-column);
+        }
+    }
+}
+@include lg{
+    @for $i from 1 through $grid-column {
+        .col-#{$i}-lg{
+            @include border-box;
+            width: math.div($i * 100%, $grid-column);
+        }
+    }
+}
+@include xl{
+    @for $i from 1 through $grid-column {
+        .col-#{$i}-xl{
+            @include border-box;
+            width: math.div($i * 100%, $grid-column);
+        }
+    }
+};
+
+$column-gap:(
+    "0":0,
+    "1":5px,
+    "2":10px,
+    "3":15px,
+    "4":20px,
+    "5":25px,
+    "6":30px,
+    "7":35px,
+    "8":40px,
+    "9":45px,
+    "10":50px
+);
+
+@each $key, $val in $column-gap {
+    .gap-#{$key} > *{
+        padding: $val;
+    }
+    .gap-#{$key} {
+      margin-left: -$val;
+      margin-right: -$val;
+    }
+    
+}

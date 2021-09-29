@@ -57,6 +57,15 @@ body{
             }
           
         }
+        @media screen and (min-width:1000px) {
+            margin-left: -16px;
+
+            h1{
+            }
+            img{
+            }
+          
+        }
     }
     
     
@@ -78,7 +87,7 @@ body{
         align-items: flex-start;
         transform: translateX(-100%);
         transition: transform .5s ease;
-        z-index: 9;
+        z-index: 15;
 
         i{
            
@@ -92,7 +101,7 @@ body{
         transform: translateX(0);
         height: 91vh;
         top: 67px;
-        margin-left: -3px;
+        margin-left: 5px;
 
 
 
@@ -238,6 +247,7 @@ body{
                 right: 30%;
                 width: 50%;
                 z-index: 3;
+               
            
         
     }

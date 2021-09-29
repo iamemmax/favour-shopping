@@ -32,9 +32,21 @@ const UserInfo = document.querySelector(".UserInfo"),
 
     // add new product
 
-    const addNew  = document.querySelector("#addmore")
+    // const addNew  = document.querySelector("#addmore")
 
 
-    addNew.addEventListener("click", (e) =>{
-        alert("you click")
+    // addNew.addEventListener("click", (e) =>{
+    //     alert("you click")
+    // })
+
+
+    // cartegories selection
+    const ProductCategory = document.querySelector(".categories")
+    const  cateBtns = document.querySelectorAll(".cart")
+    cateBtns.forEach(cateBtn =>{
+      cateBtn.addEventListener("click", (e) =>{
+        ProductCategory.querySelector(".active").classList.remove("active")
+        cateBtn.classList.add("active")
+      })
     })
+        
