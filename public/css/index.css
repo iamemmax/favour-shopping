@@ -1002,15 +1002,16 @@ body {
 .header .logo {
   position: relative;
   margin-left: 2rem;
+  width: 180px;
   padding: 5px;
   margin-top: 5px;
 }
 .header .logo img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   left: 0;
-  top: 1px;
+  top: 2px;
 }
 .header .logo h1, .header .logo a {
   font-family: "Roboto", sans-serif;
