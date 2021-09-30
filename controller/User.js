@@ -68,7 +68,12 @@ exports.newUser = async (req, res) => {
     await newUser.save((err, save) => {
       if (err) console.log(err);
       if (save) {
-        res.redirect("/user/login");
+        res.render("./Authentication/success", {
+          title: "registration Successfull",
+          description: "register to your account signup to your account ",
+          keyword: "registeration success  signup complete",
+          username
+        });
       }
     });
   }
@@ -155,3 +160,4 @@ exports.logOut = (req, res) =>{
   res.clearCookie('connect.sid', {path: '/'})
   res.redirect("/user/login")
 }
+
