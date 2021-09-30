@@ -9,37 +9,91 @@
     <!-- META KEYWORD -->
     <meta name="keyword" content="<%- keyword %> ">
     <title><%- title%></title>
+    <link rel="stylesheet" href="./../.././css/pages/authe.css">
+    
+    
+
+
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 </head>
 
-       <div class="container">
-           
-           
-           <form action="/user/login" method="POST">
-            <h2>Signin To Account</h2>
+<body>
+       <div class="authForm">
+        
+               <div class="form">
+                <form action="/user/login" method="POST">
+                    <div class="signUp_container">
+                    <h2>LOGIN AN ACCOUNT</h2>
+        
                     <% if (typeof error !== "undefined") { %>
-                
+                    
                         <% error.forEach(errors => { %>
                             <div class="error" id="error" role="alert">
-                                <%= errors.msg %> 
-                                <button type="button"><i class="fas fa-times"></i></button>
+                                <p><%= errors.msg %></p> 
+                               <span> <i class="fas fa-times" id="errBtn" ></i></span>
                             </div>
                             
                             <% }) %>
                             <% } %>
+                       
+                        <div class="username">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="username" required   <%= typeof username != 'undefined' ? username : "" %>>
+                            <label for="username" class="label-name">
+                                Username/Email
+                            </label>
+                        </div>
+                   
+                    <div class="password">
+                        <i class="fas fa-key"></i>
+                       
+                        <input type="password" required name="password" placeholder="" id="password">
+                        <label for="password" class="label-name">
+                            password
+                        </label>
+       
+        
+                    </div>
+                    
+
+                    <button type="submit">login</button>
+                    <a href="/user/register" id="already">Not yet a member</a>
+                    <a href="/user/forget" title="forget password" id="already" class="forget">Forget password</a>
+                    
+                </div>
+                <div class="thirdPartyAuth loginThirdParty">
+                    <p id="continue"><span>Or</span></p>
+                    <p id="title">Signin with</p>
+                    
+                        
+                        <div class="social-icons ">
+
+                            <a href="/users/facebook" title="Signin with your  facebook account"><i class="fab fa-facebook-f"></i></a>
+                            <a href="/user/google" title="Signin with your google Account"> <i class="fab fa-google"></i></a>
+                            
+                            <a href="/users/instagram" title=" Signin with your instagram account"><i class="fab fa-instagram"></i></a>   
+                            </div>
+                            
+                    </div>
+                </form>
+                         
     
+                        
 
-            <input type="text" name="username" placeholder="Enter username/Email" id="">
-            <input type="password" name="password" placeholder="Password" id="">
-            <button type="submit">Login</button>
-        </form>
-    </div>
+               </div>
+               <div class="text">
+                   <h2>Welcome to Davinsoft</h2>
+                   
+           </div>
+        
+        </body>
+    <script src="../.././js/auth.js"></script>
 
-<body>
-    
-    
-
-
-</body>
 </html>
+
+
+
+    
+ 

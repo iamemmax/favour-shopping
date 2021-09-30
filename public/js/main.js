@@ -15,15 +15,14 @@ const menu = document.querySelector(".menu"),
 
 // show user information on clicking the user icon
 const UserInfo = document.querySelector(".UserInfo"),
-      userIcon = document.querySelector(".userIcon")
+      userIcon = document.querySelector(".userIcon"),
+      removeOnClick = document.querySelector(".removeOnClick")
 
-      userIcon.addEventListener("mouseover", (e) =>{
+      userIcon.addEventListener("click", (e) =>{
         UserInfo.classList.add("showUserInfo")
+        removeOnClick.classList.add("showremove")
       })
-      UserInfo.addEventListener("mouseleave", (e) =>{
-        UserInfo.classList.remove("showUserInfo")
       
-      })
       
       
 

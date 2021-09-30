@@ -4,7 +4,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
 exports.getRegister = (req, res) => {
-  res.render("./Authentication/Register", {
+  res.render("./Authentication/register", {
     title: "Register Account",
 
     description: "register to your account signup to your account ",
@@ -52,7 +52,7 @@ exports.newUser = async (req, res) => {
 
   // re-rendering the signup page incase of any error
   if (error.length > 0) {
-    res.render("./Authentication/Register", {
+    res.render("./Authentication/register", {
       title: "Register Account",
       description: "register to your account signup to your account ",
       keyword: "register Account  signup Account",
@@ -76,7 +76,7 @@ exports.newUser = async (req, res) => {
 
 // render Login Page
 exports.getLogin = (req, res) => {
-  res.render("./Authentication/Login", {
+  res.render("./Authentication/login", {
     title: "Login to Account",
     description: "Login to your account signin to your account ",
     keyword: "Login Account  signin Account",
@@ -101,14 +101,12 @@ exports.loginUser = async (req, res) => {
       done
     ) {
       userSchema
-        .findOne(
-          username.includes("@") ? { email: username } : { username: username }
-        )
+        .findOne( username.includes("@") ? { email: username } : { username: username })
         .then((user) => {
           if (!user) {
             error.push({ msg: "Invalid login credentials." });
 
-            res.render("./Authentication/Login", {
+            res.render("./Authentication/login", {
               title: "Login to Account",
               description: "Login to your account signin to your account ",
               keyword: "Login Account  signin Account",
@@ -126,17 +124,23 @@ exports.loginUser = async (req, res) => {
   );
 
   if (error.length > 0) {
-    res.render("./Authentication/Login", {
+    res.render("./Authentication/login", {
       title: "Login to Account",
       description: "Login to your account signin to your account ",
       keyword: "Login Account  signin Account",
-      error,
-      user: req.user
+      user: req.user,
+      error
     });
   } else {
     passport.authenticate("local")(req, res, function (err) {
       if (err) {
-        throw err;
+        res.render("./Authentication/login", {
+          title: "Login to Account",
+          description: "Login to your account signin to your account ",
+          keyword: "Login Account  signin Account",
+          user: req.user,
+          error
+        });
       } else {
         res.redirect("/");
         console.log("login");

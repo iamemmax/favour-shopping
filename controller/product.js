@@ -4,6 +4,7 @@ const sharp = require("sharp");
 const path = require("path");
 const fs = require("fs");
 const multer = require("multer")
+const stripHtml = require("striptags")
 
 exports.getUpload = (req, res) => {
   res.render("./product/newProduct", {
@@ -22,6 +23,8 @@ exports.newProduct = async (req, res) => {
     if(!req.files){
       error.push({msg: "please choose a photo"})
     }
+    
+    console.log(stripHtml(description));
     
     
     if(req.files.length > 6){
@@ -50,7 +53,7 @@ exports.newProduct = async (req, res) => {
       let productImgg = req.files
       for(let productPix of productImgg) {
         
-        const { filename: image } = req.files;
+        // const { filename: image } = req.files;
 
         await sharp(productPix.path)
         .resize(500, 500, {
@@ -71,13 +74,14 @@ exports.newProduct = async (req, res) => {
       
       
     }
-   
-    
+  
     
     let postProduct = await new productSchema({
       productName, price, category, color, size, totalQty, description,
       productImg:productImgContainer,  postedBy:req.user._id
     })
+
+    console.log(postProduct);
    
     let save =  await postProduct.save()
     if(!save){

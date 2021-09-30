@@ -85,7 +85,7 @@ productSchema.pre("validate", function(next){
 productSchema.pre("validate", function(next){
     if(this.description){
         this.description = htmlPurify.sanitize(this.description)
-        this.snippet = stripHtml(this.description.subString(0, 200)).result
+        // this.snippet = stripHtml(this.description.subString(0, 200)).result
     }
     next()
 })

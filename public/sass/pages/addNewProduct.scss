@@ -1,0 +1,60 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Roboto&display=swap");
+figure{
+    
+    .image {
+        display: inline-block;
+    border: 1px solid gray;
+    margin: 0 2px 0 1px;
+    background: #f5f2f0;
+}
+
+.align-left {
+    float: left;
+}
+
+.align-right {
+    float: right;
+}
+
+.image img {
+    margin: 8px 8px 0 8px;
+}
+
+.image figcaption {
+    margin: 6px 8px 6px 8px;
+    text-align: center;
+}
+
+}
+  
+  /*
+   Alignment using classes rather than inline styles
+   check out the "formats" option
+  */
+  
+  img{
+
+  .align-left {
+    float: left;
+  }
+  
+  .align-right {
+    float: right;
+}  
+}
+  
+  /* Basic styles for Table of Contents plugin (toc) */
+  .mce-toc {
+    border: 1px solid gray;
+    
+    h2 {
+        margin: 4px;
+    }
+    
+    li {
+        list-style-type: none;
+    }
+}
+  
+  

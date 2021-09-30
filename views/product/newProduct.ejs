@@ -7,10 +7,12 @@
         <title><%- title %> </title>
         <link rel="shortcut icon" href="../.././img/davin-removebg-preview (1) (1).png" type="image/x-icon">
         <link rel="stylesheet" href="./../.././css/index.css">
+        <link rel="stylesheet" href="./../.././css/pages/addNewProduct.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link href="your-project-dir/icon-font/lineicons.css" rel="stylesheet">
         <!-- <script src="https://cdn.ckeditor.com/ckeditor5/29.2.0/inline/ckeditor.js"></script> -->
-        <script src="https://cdn.ckeditor.com/ckeditor5/29.2.0/decoupled-document/ckeditor.js"></script>
+        <!-- <script src="https://cdn.ckeditor.com/ckeditor5/29.2.0/decoupled-document/ckeditor.js"></script> -->
+        <script src="https://cdn.tiny.cloud/1/nzhigsuqq24vhnz8ccz306il2a6in4sgkz8tl0g4zsiznyx3/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
 </head>
 <body >
@@ -57,27 +59,29 @@
         
         <div class="description">
             <div id="toolbar-container"></div>            
-                <div class="description" placeholder="description" contenteditable="true"  id="editor" style="background-color: #fff;color: black;"></div>
+                <!-- <div class="description" name="description" placeholder="description" contenteditable="true"  id="editor" style="background-color: #fff;color: black;"></div> -->
+                <textarea name="description" id="open-source-plugins"  contenteditable="true" style="background-color: #fff;color: black;" ></textarea>
+               
+<!-- <textarea id="open-source-plugins"> -->
+   
+  
+    
+  </textarea>
+  
+  
+  
+
         </div>
 
         <button type="submit" >Add Product</button>
         </form>
     </div>
 
-<script>
-          DecoupledEditor
-        .create( document.querySelector( '#editor' ) )
-        .then( editor => {
-            const toolbarContainer = document.querySelector( '#toolbar-container' );
-
-            toolbarContainer.appendChild( editor.ui.view.toolbar.element );
-        } )
-        .catch( error => {
-            console.error( error );
-        } );
-    </script>
 
 
+
+<!-- tiny editor -->
+    <script src="../.././js/editor.js"></script>
     <script src="../.././js/product.js"></script>
 </body>
 </html>
