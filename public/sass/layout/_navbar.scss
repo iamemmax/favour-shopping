@@ -29,11 +29,12 @@ body{
     // logo
     .logo{
         position: relative;
-        margin-left: 2rem;
-        // border: 2px solid red !important;
-        width: 180px;
+        margin-left: 1rem;
+        // border: 2px solid rgb(10, 0, 99) !important;
+        width: 200px !important;
         padding: 5px;
         margin-top: 5px;
+        
 
 
          img{
@@ -47,7 +48,7 @@ body{
             font-family: 'Roboto', sans-serif;
             color: #eee;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 16px;
             margin-left: 1rem;
             
         }
@@ -159,6 +160,7 @@ body{
         align-items: center;
         justify-content: flex-start;
         width: 50%;
+        // border: 2px solid red;
     
         
         // media query
@@ -174,7 +176,7 @@ body{
            
 
             i{
-                font-size: 20px;
+                font-size:  18px;
                 color: #eee;
             }
 
