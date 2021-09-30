@@ -1,7 +1,6 @@
 const express = require("express")
 const path = require("path")
 const cors = require("cors")
-const color = require("colors")
 require("dotenv").config()
 const mongoose = require("mongoose")
 const session = require("express-session")
@@ -70,5 +69,5 @@ app.use("/product", productRouter);
 // listen to Port
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () =>{
-    console.log(`server started on http://localhost:${PORT}`.red);
+    console.log(`server started on http://localhost:${PORT}`);
 })
