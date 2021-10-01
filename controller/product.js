@@ -57,15 +57,10 @@ exports.newProduct = async (req, res) => {
 
         await sharp(productPix.path)
         .flatten(true)
-        .resize(500, 500, {
-          fit: sharp.fit.inside,
-          background:('white')
-         
-     })
-     .jpeg({quality:90})
+        .resize(500, 500)
+     .png({quality:90})
    
-     .toFile(
-      path.resolve(__dirname, ".","../public/img", "productImg", productPix.filename)
+     .toFile(path.resolve(__dirname, ".","../public/img", "productImg", productPix.filename)
       )
       fs.unlinkSync(productPix.path);
       const dbFile ={
