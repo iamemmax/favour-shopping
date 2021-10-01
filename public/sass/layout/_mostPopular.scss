@@ -80,8 +80,13 @@
 
             @media screen and (max-width:769px) {
                 width: 165px;
-                > div{
-                    margin: 5px;
+                
+                h2{
+                   font-size: 14px !important;
+                }
+                p{
+                    font-size: 14px !important;
+
                 }
             }
             

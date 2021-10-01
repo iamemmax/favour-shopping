@@ -1802,8 +1802,11 @@ body {
   .mostPopular .add-con > div {
     width: 165px;
   }
-  .mostPopular .add-con > div > div {
-    margin: 5px;
+  .mostPopular .add-con > div h2 {
+    font-size: 14px !important;
+  }
+  .mostPopular .add-con > div p {
+    font-size: 14px !important;
   }
 }
 .mostPopular .add-con > div .img-responsive {
