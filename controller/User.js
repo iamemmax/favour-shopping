@@ -65,8 +65,15 @@ exports.newUser = async (req, res) => {
       password,
     });
 
-    await newUser.save((err, save) => {
-      if (err) console.log(err);
+    await newUser.save((error, save) => {
+      if (error){
+        res.render("./Authentication/Register", {
+          title: "Register Account",
+          description: "register to your account signup to your account ",
+          keyword: "register Account  signup Account",
+          error,
+        });
+      }
       if (save) {
         res.render("./Authentication/Success", {
           title: "registration Successfull",
