@@ -2,7 +2,7 @@
     position: relative;
     width: 95%;
     margin: 0px auto;
-    height: auto;
+    height: auto !important;
     background-color: #fff;
     
     
@@ -37,6 +37,7 @@
         padding: 20px;
         flex-flow: row wrap;
         // margin-bottom: 5rem;
+        height: 1000px !important;
         
         div{
             margin: 15px;
@@ -54,24 +55,32 @@
             color: rgb(236, 230, 230);
             border-radius: 4;
         }
-        
+        @media screen and (max-width:769px) {
+            display: none;
+        }
     }
     
     
     .add-con{
+        width: 100%;
         position: relative;
-        top: 8rem;
+        // top: 8rem;?
+        margin-top: 8rem;
         height: auto;
         // background-color: rgb(252, 252, 252);
         @include flex;
         flex-flow: row wrap;
 
        > div{
-            // width: 180px;
-            height: 330px;
+            width: 200px;
+            height: 340px;
             margin: 10px;
             background-color:#f3f3f3;
             // box-shadow: 0px 0px 2px 5px rgb(240, 240, 240);
+
+            @media screen and (max-width:769px) {
+                width: 150px;
+            }
             
             .img-responsive{
                 height: 200px;
@@ -103,7 +112,7 @@
             p  {
                 font-size: 16px;
                 font-family: 'Poppins', sans-serif;
-                padding: 10px;
+                padding: 5px 10px;
 
 
             }
@@ -116,6 +125,7 @@
                color:lighten(#eee, 10%);
                margin-left: 10px;
                display: inline-block;
+               margin-bottom: 10px;
 
 
 
@@ -123,12 +133,11 @@
 
         }
         
-        @media screen and (max-width:100%) {
-            width: 100%;
+        
+        
+        @media screen and (max-width:1000px) {
+            width: 100% !important;
             max-width: 100%;
         }
     }
-    
-    overflow: hidden;
-    
 }

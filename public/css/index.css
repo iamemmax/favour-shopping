@@ -1716,9 +1716,8 @@ body {
   position: relative;
   width: 95%;
   margin: 0px auto;
-  height: auto;
+  height: auto !important;
   background-color: #fff;
-  overflow: hidden;
 }
 .mostPopular .line {
   position: absolute;
@@ -1761,6 +1760,7 @@ body {
   width: 100%;
   padding: 20px;
   flex-flow: row wrap;
+  height: 1000px !important;
 }
 .mostPopular .categories div {
   margin: 15px;
@@ -1776,9 +1776,15 @@ body {
   color: #ece6e6;
   border-radius: 4;
 }
+@media screen and (max-width: 769px) {
+  .mostPopular .categories {
+    display: none;
+  }
+}
 .mostPopular .add-con {
+  width: 100%;
   position: relative;
-  top: 8rem;
+  margin-top: 8rem;
   height: auto;
   display: flex;
   justify-content: center;
@@ -1787,9 +1793,15 @@ body {
   flex-flow: row wrap;
 }
 .mostPopular .add-con > div {
-  height: 330px;
+  width: 200px;
+  height: 340px;
   margin: 10px;
   background-color: #f3f3f3;
+}
+@media screen and (max-width: 769px) {
+  .mostPopular .add-con > div {
+    width: 150px;
+  }
 }
 .mostPopular .add-con > div .img-responsive {
   height: 200px;
@@ -1816,7 +1828,7 @@ body {
 .mostPopular .add-con > div p {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
-  padding: 10px;
+  padding: 5px 10px;
 }
 .mostPopular .add-con > div button {
   background-color: #b06b03;
@@ -1827,10 +1839,11 @@ body {
   color: white;
   margin-left: 10px;
   display: inline-block;
+  margin-bottom: 10px;
 }
-@media screen and (max-width: 100%) {
+@media screen and (max-width: 1000px) {
   .mostPopular .add-con {
-    width: 100%;
+    width: 100% !important;
     max-width: 100%;
   }
 }
