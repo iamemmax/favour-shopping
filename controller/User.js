@@ -79,9 +79,9 @@ exports.newUser = async (req, res) => {
   }
 };
 
-// render Login Page
+// render Login Page views\Authentication\login.ejs
 exports.getLogin = (req, res) => {
-  res.render("./Authentication/login", {
+  res.render("./Authentication/Login", {
     title: "Login to Account",
     description: "Login to your account signin to your account ",
     keyword: "Login Account  signin Account",
@@ -129,7 +129,7 @@ exports.loginUser = async (req, res) => {
   );
 
   if (error.length > 0) {
-    res.render("./Authentication/login", {
+    res.render("./Authentication/Login", {
       title: "Login to Account",
       description: "Login to your account signin to your account ",
       keyword: "Login Account  signin Account",
@@ -139,7 +139,7 @@ exports.loginUser = async (req, res) => {
   } else {
     passport.authenticate("local")(req, res, function (err) {
       if (err) {
-        res.render("./Authentication/login", {
+        res.render("./Authentication/Login", {
           title: "Login to Account",
           description: "Login to your account signin to your account ",
           keyword: "Login Account  signin Account",
