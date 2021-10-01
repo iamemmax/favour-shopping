@@ -75,10 +75,10 @@ exports.newUser = async (req, res) => {
         });
       }
       if (save) {
-        res.render("./Authentication/Success", {
-          title: "registration Successfull",
-          description: "register to your account signup to your account ",
-          keyword: "registeration success  signup complete",
+        res.render("./Authentication/Welcome", {
+          title: `welcome ${username}`,
+          description: "Registration successful success welcome ",
+          keyword: "registeration successfull success  welcome complete",
           username
         });
       }
