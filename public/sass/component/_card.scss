@@ -1,58 +1,18 @@
-.card{
-    width: 100%;
+// .card{
+//     display: flex;
+//     width: 100%;
+//     height: 250px;
     
-    > div{
-        
-    }
-
-
-    .img-responsive{
-        width: 100%;
-        
-        img{
-            width: 100% !important;
-           object-fit: cover;
-           object-position: top;
-            height: 200px !important;
-            // border: 2px solid red;
+//    > div{
+// background-color: red;
+// }
+//         .img-responsive{
+//             height: 150px;
+//             width: 100%;
             
-        }
-    }
-
-    .card-title {
-        padding: 5px 0;
-        color: #222;
-        font-family: 'Roboto', sans-serif;
-        text-transform: capitalize;
-        
-        h2{
-            font-size: 18px;
-            
-        }
-    }
-    .card-body{
-        
-        
-        p{
-            color: #555;
-            font-family: 'Poppins', sans-serif;
-            font-size: 14px;
-            padding: 10px 0px;
-            font-weight: 500;
-
-
-        }
-        button{
-            @include btn-default;
-            padding: 10px 15px;
-            // padding-left: 0;
-            border-radius: 5px;
-            background-color: darken($secondary,  6%);
-            font-weight: 600;
-        }
-    }
-    a{
-        text-decoration: none;
-    }
-
-}
+//             img{
+//                 height: 180px;
+//                 width: 100%;
+//             }
+//         }
+// }

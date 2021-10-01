@@ -77,8 +77,8 @@
   }
   
   .ctrl-btn {
-    padding: 20px 20px;
-    min-width: 50px;
+    padding:10px;
+    min-width: 40px;
     background: $primary;
     border: none;
     font-weight: 600;
@@ -90,17 +90,32 @@
     position: absolute;
     top: 50%;
     margin-top: -27.5px;
+    margin-left: -.5rem;
+    text-align: center;
   }
   
   .ctrl-btn.pro-prev {
     left: 0;
     color: #fff;
+    margin-left: -1rem;
+
+    i{
+      margin-right: -1rem;
+      font-size: 20px;
+    }
   }
   
   .ctrl-btn.pro-next {
     right: 0;
     color: #fff;
+    margin-right: -1rem;
+    @include flex;
 
+    i{
+      margin-left: -1rem;
+      font-size: 20px;
+
+    }
   }
   
 }

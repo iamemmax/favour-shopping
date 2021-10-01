@@ -5,7 +5,7 @@
 }
 .slider{
     position: relative;
-    height: 80.7vh;
+    height: 60.7vh;
     width: 100%;
 
         
@@ -79,6 +79,7 @@
         position: absolute;
         top: 0;
         left: 0;
+
         bottom: 0;
         color: white;
         font-weight: 700;
@@ -131,7 +132,7 @@
     
     ul#move li img {
         width: 100%;
-        object-fit: cover;
+        object-fit: inherit;
         height: 100% !important;
     }
     
@@ -179,4 +180,3 @@
     
 }
 
-// 07042693973

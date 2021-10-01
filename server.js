@@ -59,7 +59,7 @@ mongoose.connect(process.env.db_connect, {
     useNewUrlParser: true, useUnifiedTopology: true 
 }, (err, connet)=>{
     if(err) console.log(err);
-    else console.log("database connected successfully".blue)
+    else console.log("database connected successfully")
 })
 
 // Routes

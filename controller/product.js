@@ -56,8 +56,11 @@ exports.newProduct = async (req, res) => {
         // const { filename: image } = req.files;
 
         await sharp(productPix.path)
+        .flatten(true)
         .resize(500, 500, {
           fit: sharp.fit.inside,
+          background:('white')
+         
      })
      .jpeg({quality:90})
    

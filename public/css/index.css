@@ -1257,47 +1257,6 @@ body {
   display: block !important;
 }
 
-.card {
-  width: 100%;
-}
-.card .img-responsive {
-  width: 100%;
-}
-.card .img-responsive img {
-  width: 100% !important;
-  object-fit: cover;
-  object-position: top;
-  height: 200px !important;
-}
-.card .card-title {
-  padding: 5px 0;
-  color: #222;
-  font-family: "Roboto", sans-serif;
-  text-transform: capitalize;
-}
-.card .card-title h2 {
-  font-size: 18px;
-}
-.card .card-body p {
-  color: #555;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  padding: 10px 0px;
-  font-weight: 500;
-}
-.card .card-body button {
-  border: none;
-  display: block;
-  outline: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  background-color: #c47703;
-  font-weight: 600;
-}
-.card a {
-  text-decoration: none;
-}
-
 .slide_container {
   position: relative;
   width: 100%;
@@ -1306,7 +1265,7 @@ body {
 
 .slider {
   position: relative;
-  height: 80.7vh;
+  height: 60.7vh;
   width: 100%;
 }
 .slider #slider {
@@ -1410,7 +1369,7 @@ body {
 }
 .slider ul#move li img {
   width: 100%;
-  object-fit: cover;
+  object-fit: inherit;
   height: 100% !important;
 }
 .slider ul#move li:nth-child(1) {
@@ -1604,8 +1563,8 @@ body {
   margin-top: 45px;
 }
 .hot-deal .ctrl-btn {
-  padding: 20px 20px;
-  min-width: 50px;
+  padding: 10px;
+  min-width: 40px;
   background: #131921;
   border: none;
   font-weight: 600;
@@ -1615,14 +1574,30 @@ body {
   position: absolute;
   top: 50%;
   margin-top: -27.5px;
+  margin-left: -0.5rem;
+  text-align: center;
 }
 .hot-deal .ctrl-btn.pro-prev {
   left: 0;
   color: #fff;
+  margin-left: -1rem;
+}
+.hot-deal .ctrl-btn.pro-prev i {
+  margin-right: -1rem;
+  font-size: 20px;
 }
 .hot-deal .ctrl-btn.pro-next {
   right: 0;
   color: #fff;
+  margin-right: -1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.hot-deal .ctrl-btn.pro-next i {
+  margin-left: -1rem;
+  font-size: 20px;
 }
 
 .advert {
@@ -1670,7 +1645,7 @@ body {
 }
 .advert .advert_middle h2 {
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 30px;
   padding: 10px;
 }
@@ -1730,6 +1705,10 @@ body {
 @media screen and (max-width: 1000px) {
   .advert {
     width: 100%;
+    height: auto;
+  }
+  .advert button {
+    margin-bottom: 3rem;
   }
 }
 
@@ -1794,12 +1773,61 @@ body {
 .mostPopular .categories .active {
   background-color: #e28904;
   padding: 8px 15px;
-  color: #fff;
+  color: #ece6e6;
   border-radius: 4;
 }
 .mostPopular .add-con {
   position: relative;
   top: 2rem;
   height: auto;
-  background-color: #fcfcfc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.mostPopular .add-con > div {
+  height: 330px;
+  background-color: #f3f3f3;
+}
+.mostPopular .add-con > div .img-responsive {
+  height: 200px;
+  width: 100%;
+  background-color: unset;
+}
+.mostPopular .add-con > div .img-responsive img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mostPopular .add-con > div a {
+  text-decoration: none;
+  color: #222;
+}
+.mostPopular .add-con > div h2 {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  padding: 5px 0px;
+}
+.mostPopular .add-con > div h2::first-letter {
+  text-transform: uppercase;
+}
+.mostPopular .add-con > div p {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  padding: 5px 0px;
+}
+.mostPopular .add-con > div button {
+  background-color: #b06b03;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: white;
+}
+@media screen and (max-width: 100%) {
+  .mostPopular .add-con {
+    width: 100%;
+    max-width: 100%;
+  }
 }

@@ -4,12 +4,13 @@
     margin: 0px auto;
     height: auto;
     background-color: #fff;
-
-
-
-
+    
+    
+    
+    
+    
     .line{
-       @include divider;
+        @include divider;
     }
     #mostPopular-h2{
         width: 100%;
@@ -20,12 +21,12 @@
         font-size: 25px;
         font-weight: 600;
     }
-
+    
     @media screen and (max-width:1000px) {
         width: 100%;
     }
-
-
+    
+    
     .categories{
         display: flex;
         position: absolute;
@@ -36,7 +37,7 @@
         padding: 20px;
         flex-flow: row wrap;
         // margin-bottom: 5rem;
-
+        
         div{
             margin: 15px;
             font-family: 'Roboto', sans-serif;
@@ -45,26 +46,87 @@
             cursor: pointer;
             text-transform: capitalize;
             
-
+            
         }
         .active{
             background-color: $secondary;
             padding: 8px 15px;
-            color: #fff;
+            color: rgb(236, 230, 230);
             border-radius: 4;
         }
-
+        
     }
-
-
+    
+    
     .add-con{
-       position: relative;
-       top: 2rem;
-       height: auto;
-       background-color: rgb(252, 252, 252);
-       
+        position: relative;
+        top: 2rem;
+        height: auto;
+        // background-color: rgb(252, 252, 252);
+        @include flex;
+        flex-flow: row wrap;
+
+       > div{
+            // width: 180px;
+            height: 330px;
+            // margin: 10px;
+            background-color:#f3f3f3;
+            // box-shadow: 0px 0px 2px 5px rgb(240, 240, 240);
+            
+            .img-responsive{
+                height: 200px;
+                width: 100%;
+                background-color: unset;
+
+                img{
+                    width: 100%;
+                    
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            a{
+                text-decoration: none;
+                color: #222;
+            }
+            h2{
+                font-size: 16px;
+                font-family: 'Poppins', sans-serif;
+                padding: 5px 0px;
+
+                &::first-letter{
+                    text-transform: uppercase;
+                }
+            }
+
+            p  {
+                font-size: 16px;
+                font-family: 'Poppins', sans-serif;
+                padding: 5px 0px;
+
+
+            }
+            button{
+               background-color: darken($secondary, 10%);
+               border: none;
+               font-family: 'Poppins', sans-serif;
+               margin-bottom: 10px;
+               font-weight: 700;
+               color:lighten(#eee, 10%);
+
+
+
+            }
+
+        }
+        
+        @media screen and (max-width:100%) {
+            width: 100%;
+            max-width: 100%;
+        }
     }
-
+    
     overflow: hidden;
-
+    
 }
