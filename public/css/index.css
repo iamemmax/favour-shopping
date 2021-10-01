@@ -1800,7 +1800,10 @@ body {
 }
 @media screen and (max-width: 769px) {
   .mostPopular .add-con > div {
-    width: 150px;
+    width: 165px;
+  }
+  .mostPopular .add-con > div > div {
+    margin: 5px;
   }
 }
 .mostPopular .add-con > div .img-responsive {
@@ -1810,8 +1813,6 @@ body {
 }
 .mostPopular .add-con > div .img-responsive img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .mostPopular .add-con > div a {
   text-decoration: none;
