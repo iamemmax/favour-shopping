@@ -14,6 +14,7 @@ body{
     position: relative;
     width: 100%;
     padding: 3px;
+    z-index: 12;
     
     nav{
         display: flex;
@@ -268,17 +269,17 @@ body{
 
 
 .UserInfo{
-    position: absolute;
+    position: fixed;
     right: 2rem;
     background-color: #eee;
     padding: 0px;
     width: 200px;
-    height: 250px;
+    height: auto;
     border-radius: 5px;
     box-shadow:0px 2px 0px 2px rgba(0,0,0, .3);
     top: 60px;
-    z-index: 11;
-    transform: scale(0);
+    z-index: 15 !important;
+    transform: scale(0) !important;
     transition: transform .5 ease-in;
 
     li{
@@ -347,20 +348,21 @@ body{
        }
    }
 }
-.showUserInfo{
-    transform: scale(1);
+
+
+.userIcon i{
+    cursor: pointer;
 }
-
-
-.removeOnClick{
+.removeOnClickAnywhere{
     position: fixed;
     width: 100%;
-    border: 2px solid red;
     height: 100vh;
-    z-index: 9;
+    z-index: 2 !important;
     inset: 0;
     display: none !important;
 }
 .showremove{
     display: block !important;
+}.showUserInfo{
+    transform: scale(1) !important;
 }

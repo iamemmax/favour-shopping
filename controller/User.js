@@ -4,7 +4,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
 exports.getRegister = (req, res) => {
-  res.render("./Authentication/register", {
+  res.render("./Authentication/Register", {
     title: "Register Account",
 
     description: "register to your account signup to your account ",
@@ -52,7 +52,7 @@ exports.newUser = async (req, res) => {
 
   // re-rendering the signup page incase of any error
   if (error.length > 0) {
-    res.render("./Authentication/register", {
+    res.render("./Authentication/Register", {
       title: "Register Account",
       description: "register to your account signup to your account ",
       keyword: "register Account  signup Account",
@@ -68,7 +68,7 @@ exports.newUser = async (req, res) => {
     await newUser.save((err, save) => {
       if (err) console.log(err);
       if (save) {
-        res.render("./Authentication/success", {
+        res.render("./Authentication/Success", {
           title: "registration Successfull",
           description: "register to your account signup to your account ",
           keyword: "registeration success  signup complete",
