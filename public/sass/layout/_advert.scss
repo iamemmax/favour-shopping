@@ -55,7 +55,7 @@ z-index: 7;
         font-family: 'Montserrat', sans-serif;
         width: 98%;
     }
-
+    
     button{
         @include btn-default;
         cursor: pointer;
@@ -65,9 +65,10 @@ z-index: 7;
         margin-top: 10px;
         color: #fff;
         font-size: 16px;
+        border-radius: 5px;
         
     }
-
+    
     // @media screen and (max-width:1300px) {
     //   align-items: flex-start;
     // }
@@ -107,8 +108,17 @@ z-index: 7;
 @media screen and (max-width:1000px) {
     width: 100%;
     height: auto;
+
+    h2{
+        font-size: 22px !important;
+        padding-bottom: 0 !important;
+    }
+    p{
+        font-size: 12px !important;
+    }
     button{
         margin-bottom: 3rem;
+        padding: 10px 15px !important;
     }
 }
 }

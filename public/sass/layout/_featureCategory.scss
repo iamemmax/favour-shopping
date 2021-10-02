@@ -7,7 +7,7 @@
     text-align: center;
     // display: flex;
     background: #fff;
-    margin-top: 10px;
+    margin-top: 20px;
     justify-content: center;
     overflow: hidden;
 
@@ -92,8 +92,9 @@
             @media screen and (max-width:1000px) {
                 // border: 2px solid rgb(64, 4, 175);
                 width: 80px;
-                height: 120px;
-                padding: 5px;
+                height: 80px;
+                // padding: 5px;
+                margin: 3px;
 
                 &:hover{
                     box-shadow: none !important;
@@ -103,12 +104,20 @@
             
 
                 img{
-                    width: 70px;
-                    height: 70px;
+                    width: 40px;
+                    height: 40px;
+                    object-fit: scale-down;
+                    
                 }
 
                 a{
                     font-size: 12px;
+
+                }
+                p{
+                    margin-top: -3px;
+                    font-size: 10px;
+
                 }
                 
             }

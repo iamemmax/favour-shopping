@@ -986,8 +986,7 @@ body {
 .header {
   background-color: #131921;
   position: relative;
-  height: 70px;
-  position: relative;
+  height: 50px;
   width: 100%;
   padding: 3px;
   z-index: 12;
@@ -1005,7 +1004,7 @@ body {
   margin-left: 1rem;
   width: 200px !important;
   padding: 5px;
-  margin-top: 5px;
+  margin-top: -7px;
 }
 .header .logo img {
   width: 25px;
@@ -1019,7 +1018,7 @@ body {
   color: #eee;
   text-decoration: none;
   font-size: 16px;
-  margin-left: 1rem;
+  margin-left: 0.8rem;
 }
 @media screen and (min-width: 768px) {
   .header .logo {
@@ -1030,11 +1029,6 @@ body {
   }
   .header .logo img {
     left: 10px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .header .logo {
-    margin-left: -16px;
   }
 }
 .header li {
@@ -1111,6 +1105,7 @@ body {
 .header .left_nav .menu i {
   font-size: 18px;
   color: #eee;
+  margin-top: -9px;
 }
 @media screen and (min-width: 1000px) {
   .header .left_nav .menu {
@@ -1122,6 +1117,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   width: 50%;
+  margin-top: -7px;
 }
 @media screen and (min-width: 768px) {
   .header .right_nav {
@@ -1200,7 +1196,7 @@ body {
 }
 .UserInfo li a {
   color: #222;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
   font-weight: 500;
@@ -1218,14 +1214,16 @@ body {
   justify-content: space-between;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 5px 15px;
+  padding: 3px 15px;
+  height: 40px;
 }
 .UserInfo .btn-info .join {
-  padding: 3px 12px;
+  padding: 0px 12px !important;
   background-color: #e28904;
   transition: background 0.5 ease;
 }
 .UserInfo .btn-info .join a {
+  font-size: 14px;
   color: #eee;
 }
 .UserInfo .btn-info .join:hover {
@@ -1233,7 +1231,7 @@ body {
 }
 .UserInfo .btn-info .signin {
   background-color: #f3d09b;
-  padding: 3px 12px;
+  padding: 0px 12px !important;
   transition: background 0.5 ease;
 }
 .UserInfo .btn-info .signin:hover {
@@ -1313,7 +1311,7 @@ body {
   align-items: center;
   flex-flow: row wrap;
   justify-content: space-between;
-  margin-top: -30px;
+  margin-top: -20px;
 }
 .slide_container #pagenavi a {
   width: 12%;
@@ -1332,12 +1330,12 @@ body {
 }
 @media screen and (max-width: 1000px) {
   .slide_container {
-    height: 410px;
+    height: 370px;
     width: 100%;
     clear: both;
   }
   .slide_container .swipe li img {
-    height: 350px;
+    height: 300px;
   }
   .slide_container #pagenavi a {
     width: 10%;
@@ -1400,7 +1398,7 @@ body {
   height: auto;
   text-align: center;
   background: #fff;
-  margin-top: 10px;
+  margin-top: 20px;
   justify-content: center;
   overflow: hidden;
 }
@@ -1469,19 +1467,24 @@ body {
 @media screen and (max-width: 1000px) {
   .featureCategory .feature-container div, .hot-deal .feature-container div {
     width: 80px;
-    height: 120px;
-    padding: 5px;
+    height: 80px;
+    margin: 3px;
   }
   .featureCategory .feature-container div:hover, .hot-deal .feature-container div:hover {
     box-shadow: none !important;
     transform: scale(0.9);
   }
   .featureCategory .feature-container div img, .hot-deal .feature-container div img {
-    width: 70px;
-    height: 70px;
+    width: 40px;
+    height: 40px;
+    object-fit: scale-down;
   }
   .featureCategory .feature-container div a, .hot-deal .feature-container div a {
     font-size: 12px;
+  }
+  .featureCategory .feature-container div p, .hot-deal .feature-container div p {
+    margin-top: -3px;
+    font-size: 10px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1516,7 +1519,7 @@ body {
 .hot-deal .slider div div {
   margin: 10px;
   position: relative;
-  width: 230px;
+  width: auto;
 }
 .hot-deal .slider div div img {
   width: 180px;
@@ -1559,7 +1562,6 @@ body {
   position: absolute;
   top: 50%;
   margin-top: -27.5px;
-  margin-left: -0.5rem;
   text-align: center;
 }
 .hot-deal .ctrl-btn.pro-prev {
@@ -1654,6 +1656,7 @@ body {
   margin-top: 10px;
   color: #fff;
   font-size: 16px;
+  border-radius: 5px;
 }
 .advert .advert_left {
   display: flex;
@@ -1692,8 +1695,16 @@ body {
     width: 100%;
     height: auto;
   }
+  .advert h2 {
+    font-size: 22px !important;
+    padding-bottom: 0 !important;
+  }
+  .advert p {
+    font-size: 12px !important;
+  }
   .advert button {
     margin-bottom: 3rem;
+    padding: 10px 15px !important;
   }
 }
 
@@ -1823,7 +1834,7 @@ body {
 .mostPopular .addProduct_container .add-con > div .card-box .card-star {
   color: #fcb750;
   font-size: 12px;
-  padding: 3px 10px;
+  padding: 5px 10px;
 }
 @media screen and (max-width: 769px) {
   .mostPopular .addProduct_container .add-con > div .card-box .card-star {

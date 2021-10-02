@@ -10,8 +10,7 @@ body{
 .header{
     background-color: $primary;
     position: relative;
-    height: 70px;
-    position: relative;
+    height: 50px;
     width: 100%;
     padding: 3px;
     z-index: 12;
@@ -34,7 +33,7 @@ body{
         // border: 2px solid rgb(10, 0, 99) !important;
         width: 200px !important;
         padding: 5px;
-        margin-top: 5px;
+        margin-top: -7px;
         
 
 
@@ -50,7 +49,7 @@ body{
             color: #eee;
             text-decoration: none;
             font-size: 16px;
-            margin-left: 1rem;
+            margin-left: .8rem;
             
         }
         
@@ -59,6 +58,7 @@ body{
 
             h1{
                 margin-left: 2rem;
+               
             }
             img{
                 left: 10px;
@@ -66,7 +66,7 @@ body{
           
         }
         @media screen and (min-width:1000px) {
-            margin-left: -16px;
+            // margin-left: -10px;
 
            
             
@@ -179,6 +179,7 @@ body{
             i{
                 font-size:  18px;
                 color: #eee;
+                margin-top: -9px;
             }
 
         @media screen and (min-width:1000px) {
@@ -191,7 +192,7 @@ body{
         justify-content: flex-end;
         align-items: center;
         width: 50%;
-       
+       margin-top: -7px;
         @media screen and (min-width:768px) {
             width: 20%;
             // border: 2px solid red;
@@ -296,12 +297,15 @@ body{
     }
    a{
        color: #222;
-       font-size: 16px;
+       font-size: 14px;
        font-family: 'Roboto', sans-serif;
        text-decoration: none;
        font-weight: 500;
        padding: 10px;
        line-height: 35px;
+
+
+      
 
     }
 
@@ -321,14 +325,16 @@ body{
        justify-content: space-between;
        margin-top: 10px;
        margin-bottom: 10px;
-       padding: 5px 15px;
-
+       padding: 3px 15px;
+       height: 40px;
+       
        .join{
-           padding: 3px 12px;
+           padding: 0px 12px !important;
            background-color: $secondary;
            transition: background .5  ease;
-
+           
            a{
+               font-size: 14px;
                color: #eee;
            }
            &:hover{
@@ -337,7 +343,8 @@ body{
        }
        .signin{
            background-color:mix(white, $secondary, 60) ;
-           padding: 3px 12px;
+           padding: 0px 12px !important;
+
            transition: background .5  ease;
 
            
