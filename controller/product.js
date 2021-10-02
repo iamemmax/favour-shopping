@@ -56,9 +56,9 @@ exports.newProduct = async (req, res) => {
         // const { filename: image } = req.files;
 
         await sharp(productPix.path)
-        .flatten(true)
+        .flatten({ background: { r: 255, g: 255, b: 255, alpha: 0 } })
         .resize(500, 500)
-     .png({quality:90})
+        .png({quality:90, force: true})
    
      .toFile(path.resolve(__dirname, ".","../public/img", "productImg", productPix.filename)
       )

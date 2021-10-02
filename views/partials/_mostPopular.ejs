@@ -29,7 +29,7 @@
            </div>
         </div>
 
-
+        <div class="addProduct_container">
         <div class="row  add-con">
             
             
@@ -41,13 +41,23 @@
                         <div class="card-img img-responsive">
                             <img src="../../img/productImg/<%= product.productImg[0].filename %> " alt="<%= product.productImg[0].filename %>">
                         </div>
+                        <div class="card-box">
+
                             <div class="card-title">
-                                <h2><%= product.productName %> </h2>
+                                <h2><%= product.productName.length > 20 ? product.productName.substr(0, 21) + ".... " : product.productName  %>  </h2>
+                            </div>
+                            <div class="card-star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
                             <div class="card-body">
                                 <p>&#8358;<%= product.price %> </p>
-                                <button class=" btn">Add to cart</button>
-
+                                
+                                
+                            </div>
                             </div>
                         
                         
@@ -62,7 +72,7 @@
                     <% }) %>
          
         
-      
+                </div>
             </div>
         
     

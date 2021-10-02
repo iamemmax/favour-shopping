@@ -1,0 +1,39 @@
+.brand{
+    border: 2px solid red;
+    width: 77.5%;
+    height: 130px;
+    margin: 0px auto;
+   position: absolute;
+   right: 0;
+    @include flex;
+    justify-content: space-between !important;
+    overflow: hidden;
+    // margin-bottom: ;
+
+    div{
+        width: 19%;
+        height: 100%;
+        background-color: #eee;
+        margin: 5px;
+        @include flex;
+
+    }
+    @media screen and (max-width:1000px) {
+        display: none;
+        clear: both;
+        width: 100%;
+        height: auto;
+
+        div{
+        width: 165px;
+
+        }
+    }
+
+    @media screen and (min-width:1250px ) and (max-width:1400px) {
+      
+        width: 73%;
+        background-color: red;
+        margin-right: 1rem;
+    }
+}
