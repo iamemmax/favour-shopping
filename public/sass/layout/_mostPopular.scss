@@ -105,7 +105,7 @@
             // object-fit: cover;
           }
            @media screen and (max-width: 769px) {
-               height: 150px;
+               height: 160px;
            }
         }
 
@@ -118,6 +118,10 @@
               color: lighten($secondary, 20%);
               font-size: 12px;
               padding: 3px 10px;
+
+              @media screen and (max-width: 769px) {
+                font-size: 10px;
+            }
           }
         }
 

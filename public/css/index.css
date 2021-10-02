@@ -1340,9 +1340,9 @@ body {
     height: 350px;
   }
   .slide_container #pagenavi a {
-    width: 11%;
+    width: 10%;
     height: 50px;
-    margin: 10px 5px;
+    margin: 15px 4px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1813,7 +1813,7 @@ body {
 }
 @media screen and (max-width: 769px) {
   .mostPopular .addProduct_container .add-con > div .img-responsive {
-    height: 150px;
+    height: 160px;
   }
 }
 .mostPopular .addProduct_container .add-con > div .card-box {
@@ -1824,6 +1824,11 @@ body {
   color: #fcb750;
   font-size: 12px;
   padding: 3px 10px;
+}
+@media screen and (max-width: 769px) {
+  .mostPopular .addProduct_container .add-con > div .card-box .card-star {
+    font-size: 10px;
+  }
 }
 .mostPopular .addProduct_container .add-con > div a {
   text-decoration: none;
