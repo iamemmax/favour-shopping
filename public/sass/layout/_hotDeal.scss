@@ -35,6 +35,14 @@
 
     img{
         width: 180px;
+        // border: 2px solid red;
+
+
+        @media screen and (max-width:768px) {
+        // border: 2px solid rgb(7, 1, 58);
+        width: 120px !important;
+          
+        }
     }
     
     
@@ -47,18 +55,45 @@
         position: relative;
         bottom: 0;
         height: 70px;
+        width: 100%;
+        margin-left: 0 !important;
+        text-align: center;
+
         
         h2{
             font-size: 14px;
             margin-top: -20px;
             color: #222;
-        }
-        p{
-            font-size: 14px;
+            // border: 2px solid rgb(1, 138, 156);
+            width: 100% !important;
+          }
+          p{
+            font-size: 12px;
             margin-top: -20px;
             color: #222;
             opacity: .8;
-
+            
+          }
+          
+          @media screen and (max-width:768px) {
+          padding-left: 0;
+          a {
+          
+            text-align: center !important;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+          }
+          
+          h2{
+            font-size: 10px;
+           
+            
+          }
+          p{
+            padding: 0;
+          }
+         
         }
         
     }

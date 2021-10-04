@@ -10,10 +10,18 @@ body{
 .header{
     background-color: $primary;
     position: relative;
-    height: 50px;
+    padding: 5px;
+    height: 70px;
     width: 100%;
-    padding: 3px;
     z-index: 12;
+    display: flex;
+    align-items: center;
+    
+    @media screen and (max-width:768px) {
+        padding: 3px;
+        height: 50px;
+        
+    }
     
     nav{
         display: flex;
@@ -30,10 +38,10 @@ body{
     .logo{
         position: relative;
         margin-left: 1rem;
-        // border: 2px solid rgb(10, 0, 99) !important;
+        // border: 2px solid rgb(10, 0, 9 9) !important;
         width: 200px !important;
         padding: 5px;
-        margin-top: -7px;
+        margin-top: -5px;
         
 
 
@@ -53,17 +61,21 @@ body{
             
         }
         
-        @media screen and (min-width:768px) {
+        @media screen and (min-width:769px) {
             margin-left: 0;
+            // pa
 
             h1{
                 margin-left: 2rem;
-               
+             
             }
             img{
                 left: 10px;
             }
           
+            a{
+                font-size: 22px;
+            }
         }
         @media screen and (min-width:1000px) {
             // margin-left: -10px;

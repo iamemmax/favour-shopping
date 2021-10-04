@@ -56,9 +56,10 @@
       border-radius: 4;
     }
     @media screen and (max-width: 769px) {
-    //   display: none;
+      display: none;
     overflow: auto;
-    // border: 2px solid red;
+    border: 2px solid red;
+    width:100%;
     
     div{
         margin: 4px;
@@ -162,19 +163,12 @@
           font-family: "Poppins", sans-serif;
           padding: 5px 10px;
           color: #eee;
+          margin-top: -5px;
+
+          // @media screen and (max-width:768px) {
+          // }
         }
-        // button{
-        //    background-color: darken($secondary, 10%);
-        //    border: none;
-        //    font-family: 'Poppins', sans-serif;
-        //    font-weight: 700;
-        //    color:lighten(#eee, 10%);
-        //    margin-left: 10px;
-        //    display: inline-block;
-        //    margin-bottom: 10px;
-
-        // }
-
+      
         &:hover{
             transform: scale(0.9);
         }
@@ -184,6 +178,10 @@
         width: 100% !important;
         max-width: 100%;
       }
+    }
+
+    @media screen and (max-width:768px) {
+      margin-top: -4rem !important;
     }
   }
 }

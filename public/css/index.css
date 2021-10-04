@@ -986,10 +986,18 @@ body {
 .header {
   background-color: #131921;
   position: relative;
-  height: 50px;
+  padding: 5px;
+  height: 70px;
   width: 100%;
-  padding: 3px;
   z-index: 12;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 3px;
+    height: 50px;
+  }
 }
 .header nav {
   display: flex;
@@ -1004,7 +1012,7 @@ body {
   margin-left: 1rem;
   width: 200px !important;
   padding: 5px;
-  margin-top: -7px;
+  margin-top: -5px;
 }
 .header .logo img {
   width: 25px;
@@ -1020,7 +1028,7 @@ body {
   font-size: 16px;
   margin-left: 0.8rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .header .logo {
     margin-left: 0;
   }
@@ -1029,6 +1037,9 @@ body {
   }
   .header .logo img {
     left: 10px;
+  }
+  .header .logo a {
+    font-size: 22px;
   }
 }
 .header li {
@@ -1446,7 +1457,7 @@ body {
   align-items: center;
   flex-flow: row wrap;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .featureCategory .feature-container, .hot-deal .feature-container {
     height: auto;
     width: 100%;
@@ -1477,8 +1488,8 @@ body {
 }
 @media screen and (max-width: 1000px) {
   .featureCategory .feature-container div, .hot-deal .feature-container div {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     margin: 3px;
   }
   .featureCategory .feature-container div:hover, .hot-deal .feature-container div:hover {
@@ -1535,6 +1546,11 @@ body {
 .hot-deal .slider div div img {
   width: 180px;
 }
+@media screen and (max-width: 768px) {
+  .hot-deal .slider div div img {
+    width: 120px !important;
+  }
+}
 .hot-deal .slider div div a {
   text-decoration: none;
 }
@@ -1542,17 +1558,38 @@ body {
   position: relative;
   bottom: 0;
   height: 70px;
+  width: 100%;
+  margin-left: 0 !important;
+  text-align: center;
 }
 .hot-deal .slider div div .info h2 {
   font-size: 14px;
   margin-top: -20px;
   color: #222;
+  width: 100% !important;
 }
 .hot-deal .slider div div .info p {
-  font-size: 14px;
+  font-size: 12px;
   margin-top: -20px;
   color: #222;
   opacity: 0.8;
+}
+@media screen and (max-width: 768px) {
+  .hot-deal .slider div div .info {
+    padding-left: 0;
+  }
+  .hot-deal .slider div div .info a {
+    text-align: center !important;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .hot-deal .slider div div .info h2 {
+    font-size: 10px;
+  }
+  .hot-deal .slider div div .info p {
+    padding: 0;
+  }
 }
 .hot-deal .slider div div:hover {
   transform: scale(0.9);
@@ -1789,7 +1826,10 @@ body {
 }
 @media screen and (max-width: 769px) {
   .mostPopular .categories {
+    display: none;
     overflow: auto;
+    border: 2px solid red;
+    width: 100%;
   }
   .mostPopular .categories div {
     margin: 4px;
@@ -1881,6 +1921,7 @@ body {
   font-family: "Poppins", sans-serif;
   padding: 5px 10px;
   color: #eee;
+  margin-top: -5px;
 }
 .mostPopular .addProduct_container .add-con > div:hover {
   transform: scale(0.9);
@@ -1889,5 +1930,10 @@ body {
   .mostPopular .addProduct_container .add-con {
     width: 100% !important;
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mostPopular .addProduct_container {
+    margin-top: -4rem !important;
   }
 }

@@ -11,6 +11,8 @@
     justify-content: center;
     overflow: hidden;
 
+    
+
     h2{
         padding: 30px;
         font-family: "Poppins", sans-serif;
@@ -66,7 +68,7 @@
         flex-flow: row wrap;
 
 
-        @media screen and (max-width:768px) {
+        @media screen and (max-width:1000px) {
            height: auto;
            width: 100%;
         }
@@ -101,10 +103,11 @@
                 margin-top: 15px;
             }
 
+            // border: 2px solid red;
             @media screen and (max-width:1000px) {
                 // border: 2px solid rgb(64, 4, 175);
-                width: 80px;
-                height: 80px;
+                width: 90px;
+                height: 90px;
                 // padding: 5px;
                 margin: 3px;
 
