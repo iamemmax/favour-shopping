@@ -1718,7 +1718,7 @@ body {
   width: 370px;
   margin-top: -20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .advert .advert_left {
     display: none;
   }
@@ -2070,9 +2070,9 @@ body {
   justify-content: space-around;
 }
 .footer_container > div {
-  width: 200px;
-  margin: 10px;
-  height: 250px;
+  width: 130px;
+  margin: 5px;
+  height: 270px;
 }
 .footer_container > div li {
   list-style: none;
@@ -2119,7 +2119,7 @@ body {
 }
 .footer_container .footer_last {
   position: absolute;
-  bottom: -3rem;
+  bottom: -2rem;
   height: 40px;
   text-align: center;
   width: 100%;
