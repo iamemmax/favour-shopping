@@ -1,0 +1,76 @@
+.customer_support{
+    @extend .shipping_container;
+    background-image: none;
+
+
+
+    
+
+    > div{
+        display: flex;
+        flex-flow: row wrap;
+        // border: 2px solid red;
+        justify-content: space-between;
+
+        // border: 2px solid red;
+        height: 130px;
+        
+
+        &:nth-child(4){
+            position: relative;
+        }
+          
+        
+        > div{
+            
+            
+            &:nth-child(odd){
+                flex: 1;
+            }
+
+            &:nth-child(even){
+                flex: 3;
+            }
+
+            h2{
+                font-size: 18px;
+            
+            }
+            p{
+                font-size: 14px;
+            }
+
+        }
+          input{
+                width: 100%;
+                border: none;
+                padding: 10px;
+                outline: none;
+                font-size: 14px;
+                padding-right: 90px;
+                font-family: "Poppins", sans-serif;
+                border-radius: 4px 0 0 4px;
+
+
+
+            }
+            button{
+                background-color: $secondary;
+                border: none;
+                padding: 10px;
+                outline: none;
+                position: absolute;
+                right: 0;
+                font-size: 14px;
+                font-family: "Poppins", sans-serif;
+                font-weight: 600;
+                text-transform: capitalize;
+                border-radius: 0px 4px 4px 0px;
+
+              
+            }
+
+            
+    }
+
+}
