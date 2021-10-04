@@ -1130,10 +1130,13 @@ body {
   width: 50%;
   margin-top: -7px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .header .right_nav {
     width: 20%;
     order: 3;
+  }
+  .header .right_nav #searchIcon {
+    display: none;
   }
 }
 .header .right_nav i {
@@ -1939,6 +1942,14 @@ body {
   .mostPopular .addProduct_container {
     margin-top: -4rem !important;
   }
+}
+
+.showProduct {
+  display: flex;
+}
+
+.hideProduct {
+  display: none;
 }
 
 .shipping_container, .customer_support {

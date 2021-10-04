@@ -18,10 +18,11 @@
                     <div class="cart" data-name="wares">Wares</div> 
                     <div class="cart" data-name="computer">computer</div> 
                     <div class="cart" data-name="phone">Phones</div> 
-                    <div class="cart" data-name="electronic">electronic</div> 
-                    <div class="cart" data-name="electronic">Fashion</div> 
-                    <div class="cart" data-name="electronic">Kitchen</div> 
-                    <div class="cart" data-name="electronic">Supermarket</div> 
+                    <div class="cart" data-name="electronics">electronic</div> 
+                    <div class="cart" data-name="Babies">Babies</div> 
+                    <div class="cart" data-name="Fashion">Fashion</div> 
+                    <div class="cart" data-name="Kitchen">Kitchen</div> 
+                    <div class="cart" data-name="Supermarket">Supermarket</div> 
                 
             </div>
                       
@@ -34,10 +35,10 @@
             
             
             <% products.forEach(product => { %>
-           
+           <div class="product_category" data-select="<%= product.category  %>">
         
                 <a href="/product/<%= product.slug %> ">
-                    <div class="card">
+                    <div class="card" >
                         <div class="card-img img-responsive">
                             <img src="../../img/productImg/<%= product.productImg[0].filename %> " alt="<%= product.productImg[0].filename %>">
                         </div>
@@ -64,6 +65,7 @@
                             
                    
                 </a>
+            </div>
                     
                     
                     

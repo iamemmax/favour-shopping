@@ -55,10 +55,23 @@ const UserInfo = document.querySelector(".UserInfo"),
     // cartegories selection
     const ProductCategory = document.querySelector(".categories")
     const  cateBtns = document.querySelectorAll(".cart")
+    const  productContainer = document.querySelectorAll(".product_category")
     cateBtns.forEach(cateBtn =>{
       cateBtn.addEventListener("click", (e) =>{
         ProductCategory.querySelector(".active").classList.remove("active")
         cateBtn.classList.add("active")
+        let cateSelect = cateBtn.getAttribute("data-name")
+        
+        productContainer.forEach(products => {
+         let productSelect = products.getAttribute("data-select")
+         if(productSelect === cateSelect || cateSelect === "all"){
+           products.classList.remove("hideProduct")
+           products.classList.add("showProduct")
+         }else{
+           products.classList.remove("showProduct")
+          products.classList.add("hideProduct")
+         }
+        })
       })
     })
         
