@@ -2,6 +2,7 @@ const express = require("express");
 const userSchema = require("../model/userSchema");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
+const bcrypt = require("bcryptjs")
 
 exports.getRegister = (req, res) => {
   res.render("./Authentication/Register", {
@@ -127,9 +128,30 @@ exports.loginUser = async (req, res) => {
             });
 
             return done(null, false);
-          }
+          }else{
 
-          return done(null, user);
+         
+            bcrypt.compare(password, user.password, (err, isMatch) =>{
+              if(err)console.log(err);
+               if(isMatch){
+                   return done(null, user)
+
+           }else{
+           error.push({msg: "incorrect username or password"})
+           res.render("./Authentication/login", {
+            title: "Login to Account",
+            description: "Login to your account signin to your account ",
+            keyword: "Login Account  signin Account",
+            user: req.user,
+            error,
+          });
+
+           console.log("incorrect username or password");
+               // return done(null, false, {msg: "incorrect username or password"})
+           }
+       })
+          
+          }
         })
         .catch((err) => console.log(err));
     })
